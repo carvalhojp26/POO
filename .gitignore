@@ -1,0 +1,65 @@
+# ?? Visual Studio 2022 / C# - Ignorar arquivos desnecessários
+
+# ?? Diretórios de compilação (binários)
+bin/
+obj/
+out/
+
+# ?? Configurações temporárias do Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.pdb
+
+# ?? Arquivos de configuração do projeto que não precisam ir para o GitHub
+*.csproj.user
+*.csproj.nuget.dgspec.json
+*.csproj.nuget.g.props
+*.csproj.nuget.g.targets
+
+# ?? Diretórios gerados automaticamente pelo NuGet
+packages/
+project.lock.json
+project.assets.json
+*.nuget.props
+*.nuget.targets
+*.nuget.cache
+
+# ?? Logs e arquivos temporários
+*.log
+*.tmp
+*.bak
+*.swp
+*.lock.json
+
+# ?? Arquivos de depuração
+*.pidb
+*.opendb
+*.sdf
+*.sqlite
+*.sln.docstates
+
+# ?? Configurações específicas do usuário no Visual Studio
+.ipch/
+*.tlog
+*.lastbuildstate
+
+# ?? Diretórios de configuração do Rider (se estiver usando)
+.idea/
+*.DotSettings.user
+
+# ?? Arquivos gerados pelo EditorConfig
+*.editorconfig
+
+# ?? Diretórios de cache do MSBuild
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# ?? Arquivos do Windows Form Designer
+*.resx
+*.designer.cs
+
+# ?? Evita rastrear arquivos antigos que já estavam no Git
+git rm -r --cached bin obj .vs
