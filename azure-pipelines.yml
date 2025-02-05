@@ -1,0 +1,17 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'windows-latest'
+
+steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '8.0.x'
+
+- script: dotnet build --configuration Release
+  displayName: 'Compilando o projeto'
+
+- script: dotnet test --configuration Release
+  displayName: 'Executando os testes'
