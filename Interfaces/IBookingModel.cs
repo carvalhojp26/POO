@@ -8,7 +8,7 @@ namespace POO.Interfaces
 {
     internal interface IBookingModel
     {
-        public bool IsValidBooking();
-        public int GetTotalNights();
+        bool IsValidDate();
+        int GetTotalNights();
     }
 }

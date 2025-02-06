@@ -7,8 +7,9 @@ using POO.Models;
 
 namespace POO.Interfaces
 {
-    internal interface IStayController
+    internal interface IBookingController
     {
-        int AddStay(Stay stay);
+        bool IsStayBooked(int stayId, DateTime arrivalDate, DateTime departureDate);
+        int AddBooking(Booking booking);
     }
 }

@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using POO.Models;
 using UtilsLibrary;  // DLL
+using POO.Interfaces;
 
 namespace POO.Controllers
 {
-    public abstract class UserController
+    public abstract class UserController : IUserController
     {
         private static readonly string ProjectRootPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
 

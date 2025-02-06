@@ -54,7 +54,7 @@ namespace POO.Models
             this.departureDate = departureDate;
         }
 
-        public bool IsValidBooking()
+        public bool IsValidDate()
         {
             return arrivalDate < departureDate;
         }
