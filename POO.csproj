@@ -11,4 +11,10 @@
     <Folder Include="Views\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="UtilsLibrary">
+      <HintPath>..\..\UtilsLibrary\UtilsLibrary\bin\Debug\net8.0\UtilsLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

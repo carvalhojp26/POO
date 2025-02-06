@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using POO.Models;
+using UtilsLibrary;  // DLL
 
 namespace POO.Controllers
 {
@@ -14,37 +15,26 @@ namespace POO.Controllers
 
         private static readonly string FilePath = Path.Combine(ProjectRootPath, "user.txt");
 
-        public bool IsValidId(int id)
+        public bool IsValidId(int id, string path)
         {
-            if (!File.Exists(FilePath))
-            {
-                return true;
-            }
-
-            if (id < 0)
+            bool valid = Utils.IsValidId(id, path);
+            if (!valid)
             {
                 Console.WriteLine("Invalid id");
                 return false;
             }
-
-            string[] strings = File.ReadAllLines(FilePath);
-
-            foreach (string line in strings)
+            else
             {
-                string[] fields = line.Split(", ");
-                if (fields[0] == id.ToString())
-                {
-                    Console.WriteLine("Id already exists");
-                    return false;
-                }
+                Console.WriteLine("Valid id");
+                return true;
             }
-            return true;
         }
+
         public int AddUser(User user)
         {
             Console.WriteLine($"📂 Salvando em: {FilePath}");
 
-            if (!IsValidId(user.Id))
+            if (!IsValidId(user.Id, FilePath))
             {
                 return 0;
             }

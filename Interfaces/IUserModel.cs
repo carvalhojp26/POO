@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace POO.Interfaces
 {
-    public interface IUserModel
+    internal interface IUserModel
     {
         bool IsValidEmail(string email);
         bool IsValidPassword(string password);
