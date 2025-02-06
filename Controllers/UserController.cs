@@ -15,26 +15,9 @@ namespace POO.Controllers
 
         private static readonly string FilePath = Path.Combine(ProjectRootPath, "user.txt");
 
-        public bool IsValidId(int id, string path)
-        {
-            bool valid = Utils.IsValidId(id, path);
-            if (!valid)
-            {
-                Console.WriteLine("Invalid id");
-                return false;
-            }
-            else
-            {
-                Console.WriteLine("Valid id");
-                return true;
-            }
-        }
-
         public int AddUser(User user)
         {
-            Console.WriteLine($"📂 Salvando em: {FilePath}");
-
-            if (!IsValidId(user.Id, FilePath))
+            if (!Utils.IsValidId(user.Id, FilePath))
             {
                 return 0;
             }

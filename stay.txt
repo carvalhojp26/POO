@@ -1,0 +1,2 @@
+1, Casa de praia, Casa de praia com piscina, 100, 10, Rio de Janeiro
+2, Casa de campo, Casa de campo com lareira, 200, 5, São Paulo
